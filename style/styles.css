@@ -1,502 +1,421 @@
-/*Selector universal*/
-
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-	font-family: 'Merriweather Sans', sans-serif;
-	font-size: 16px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 16px;
 }
 
-
-/* Home */
-
-header{
-	background-color: #38A3A5;
-    padding: 0 30px;
-    height: 100px;
+header {
+  padding: 0 30px;
+  height: 100px;
+  background-color: #38A3A5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.logo img{
-	max-width: 70px;
-}
-.navbar {
-    background-color: #38A3A5;
+header .logo img {
+  max-width: 70px;
 }
 
+.navbar,
 .navbar-collapse {
-    background-color: #38A3A5;
+  background-color: #38A3A5;
 }
-.navbar-brand a {
-	color: black!important;
-}
+.navbar a,
 .navbar-collapse a {
-    color: white!important;
+  color: #fff !important;
 }
-.nav-link.active {
-  color: black !important;
+.navbar a.active, .navbar a:hover,
+.navbar-collapse a.active,
+.navbar-collapse a:hover {
+  color: #000 !important;
 }
-.nav-link:hover {
-  color: black !important;
+.navbar .navbar-brand a,
+.navbar-collapse .navbar-brand a {
+  color: #000 !important;
 }
 
 .btn_azul {
-	background-color: #22577A;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    display: inline-block;
-    width: auto !important;
+  background-color: #22577A;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  border: none;
 }
 .btn_azul:hover {
-	border: 1px solid #22577A;
+  border: 1px solid #22577A;
 }
-
-
-/* banner */
 
 .banner {
-    text-align: center;
-    background-image: url(../img/complejoDePadel.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left top;
-    display: flex;
-    align-items: center;
-    color: white;
-    text-align: center;
-    justify-content: center;
-    min-height: 495px;
+  background-image: url("../img/complejoDePadel.png");
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  min-height: 495px;
+  text-align: center;
 }
 .banner p {
-	font-weight: 200;
-    margin: 20px 0px;
+  font-weight: 200;
+  margin: 20px 0;
 }
 .banner img {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
 }
-.text-align {
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.banner .text-align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-
-/* clases */
 
 .card-clases {
-    background-color: #f1f1f1;
-    border-radius: 10px;
-    border: none;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  border: none;
 }
+
 .clases {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 0;
 }
 .clases h2 {
-	color: #22577A;
-    padding-bottom: 40px;
+  color: #22577A;
+  padding-bottom: 40px;
 }
 .clases img {
-	width: 70%;
-	border-radius: 10px;
+  width: 70%;
+  border-radius: 10px;
 }
-.card-title {
-    font-weight: 600;
-    font-size: 20px;
+.clases .card-title {
+  font-weight: 600;
+  font-size: 20px;
 }
-.card-text {
-    padding: 10px;
+.clases .card-text {
+  padding: 10px;
 }
-
-
-/* instalaciones */
 
 .instalaciones {
-    background-color: #38A3A5;
-    padding: 80px 0;
+  background-color: #38A3A5;
+  padding: 80px 0;
 }
-.instalaciones img{
-    width: 100%;
+.instalaciones img {
+  width: 100%;
 }
-.recuadro {
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 10px;
+.instalaciones .recuadro {
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 10px;
 }
-
-
-/* valoraciones */
 
 .valoraciones {
-    padding: 80px 0;
-    font-style: italic;
-    text-align: center;
-    margin-bottom: 20px;
+  padding: 80px 0;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .valoraciones h3 {
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 }
-.card-valoraciones {
-    margin-top: 20px;
-    padding: 20px;  
+.valoraciones .card-valoraciones {
+  margin-top: 20px;
+  padding: 20px;
 }
-.card-valoraciones img {
-    width: 40%;
-    margin: 0 auto;
+.valoraciones .card-valoraciones img {
+  width: 40%;
+  margin: 0 auto;
 }
-
-
-/* beneficios */
 
 .beneficiosClases {
-    background-color: #57CC99;
-    padding: 40px 0;
+  background-color: #57CC99;
+  padding: 40px 0;
 }
-.beneficiosClases img{
-    width: 100%;
+.beneficiosClases img {
+  width: 100%;
 }
-
-
-/* ubicacion */
 
 .ubicacion {
-    background-color: #38A3A5;
+  background-color: #38A3A5;
 }
 .ubicacion h3 {
-    padding: 30px 0 30px 30px;
+  padding: 30px 0 30px 30px;
 }
 .ubicacion iframe {
-    width: 100%;
-    padding-left: 30px;
+  width: 100%;
+  padding-left: 30px;
+  height: 60%;
 }
+
+.ubicacion ul {
+  padding-top: 130px;
+}
+
 .promocion {
-    background-color: yellow;
-    padding: 20px;
-    text-align: center;
+  background-color: yellow;
+  text-align: center;
+  padding: 20px;
 }
 .promocion img {
-    max-width: 60%;
-    height: auto;
-    margin-bottom: 15px;
+  max-width: 60%;
+  margin-bottom: 15px;
 }
 .promocion .btn_azul {
-    margin-top: 15px;
-    display: inline-block;
+  margin-top: 15px;
 }
-
-
-/* footer */
 
 footer {
-    background-color: black;
-    padding: 40px;
-    margin: 0 auto;
-    text-align: center;
+  background-color: #000;
+  padding: 40px;
+  text-align: center;
 }
-.navFooter ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
+footer .navFooter ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
 }
-
-.navFooter ul li {
-    margin: 0;
+footer .navFooter ul li a {
+  color: #fff;
+  font-weight: 500;
 }
-
-.navFooter ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
+footer .navFooter ul li a:hover {
+  text-decoration: underline;
 }
-
-.navFooter ul li a:hover {
-    text-decoration: underline;
-}
-
-
-/* precios */
 
 .titulos {
-    text-align: center;
-    padding: 60px 0 20px;
-    color: #22577A;
+  text-align: center;
+  padding: 60px 0 20px;
+  color: #22577A;
 }
+
 .precios .row {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 .precios img {
-    width: 90%;
-    border-radius: 20px;
+  width: 90%;
+  border-radius: 20px;
 }
-.recuadro-precios {
-    border-radius: 20px;
+.precios .recuadro-precios {
+  border-radius: 20px;
 }
-.card-precios {
-    padding: 80px 20px;
-    border: none;
-    text-align: center;
+.precios .card-precios {
+  padding: 80px 20px;
+  border: none;
+  text-align: center;
 }
-.bg-verdeoscuro {
-    background-color: #57CC99;
+.precios .card-precios ul {
+  list-style: none;
+  padding-left: 20px;
 }
-.bg-intermedio {
-    background-color: #80ED99;
+.precios-verdescuro {
+  background-color: #57CC99;
 }
-.bg-claro {
-    background-color: #C7F9CC;
+.precios-intermedio {
+  background-color: #80ED99;
 }
-.card-precios ul {
-    list-style-type: none;
-    padding-left: 20px;
+.precios-claro {
+  background-color: #C7F9CC;
+}
+.precios .centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-/* contacto */
+.formularioContacto {
+  padding: 60px 0;
+}
 
 .tituloContacto {
-    text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left top;
-    display: flex;
-    align-items: center;
-    background-image: url(../img/canchaPadel.jpg);
-    height: 30vh;
-    color: white;
-    text-align: left;
-    padding-left: 5%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-image: url("../img/canchaPadel.jpg");
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+  color: #fff;
+  text-align: left;
+  padding-left: 5%;
 }
+
+iframe {
+  width: 100%;
+  height: 80%;
+}
+
 form {
-    background-color: #38A3A5;
-    padding: 25px;
-    border-radius: 8px;
-    width: 80%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+  background-color: #38A3A5;
+  padding: 25px;
+  border-radius: 8px;
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
 }
-
 form h1 {
-    text-align: center;
-    color: black;
-    margin-bottom: 20px;
-    font-size: medium;
+  color: #000;
+  margin-bottom: 20px;
+  font-size: medium;
 }
-
-form .inputWrapper {
-    position: relative;
-}
-
-form .inputWrapper input {
-
-    padding: 12px 0px 12px 50px;
-    margin-bottom: 15px;
-    outline: none;
-    font-size: 15px;
-    width: 85%;
-}
-
-form .inputWrapper i {
-
-    position: absolute;
-    margin-left: 20px;
-    top: 14px;
-    font-size: 20px;
-    color: #80ED99;
-    transition: .3s ease;
-}
-
-form .inputWrapper:focus-within i {
-    transform: scale(1.2);
-}
-
+form .inputWrapper,
 form .inputMensaje {
-    position: relative;
+  position: relative;
 }
-
-form .inputMensaje input {
-    padding: 12px 4px 152px 50px;
-    margin-bottom: 15px;
-    outline: none;
-    font-size: 15px;
-    width: 85%;
-}
-
+form .inputWrapper i,
 form .inputMensaje i {
-    position: absolute;
-    margin-left: 20px;
-    top: 14px;
-    font-size: 20px;
-    color: #80ED99;
-    transition: .3s ease;
+  position: absolute;
+  margin-left: 20px;
+  top: 14px;
+  font-size: 20px;
+  color: #80ED99;
+  transition: 0.3s;
+}
+form .inputWrapper i:focus-within,
+form .inputMensaje i:focus-within {
+  transform: scale(1.2);
+}
+form .inputWrapper input,
+form .inputMensaje input {
+  padding: 12px 0 12px 50px;
+  margin-bottom: 15px;
+  width: 85%;
+  font-size: 15px;
+  outline: none;
+}
+form .botonesFormulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+form .botonesFormulario button {
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: #80ED99;
+}
+form .botonesFormulario button:hover {
+  background-color: #57CC99;
+}
+form .datoscontacto {
+  text-align: center;
+  padding-top: 40px;
+  font-weight: 600;
+}
+form .datoscontacto iframe {
+  width: 100%;
 }
 
-form .inputMensaje:focus-within i {
-    transform: scale(1.2);
+.tituloFaq,
+.tituloQuienesSomos {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-image: url("../img/mujerConPaleta.png");
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+  color: #fff;
+  text-align: left;
+  padding-left: 5%;
 }
 
-.botonesFormulario {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 25px;
-    margin: 20px 0px;
+.faq-accordion {
+  padding: 30px 50px;
+  margin: 0 auto;
 }
 
-.botonesFormulario button {
-    padding: 10px 0;
-    font-size: 15px;
-    border-radius: 5px;
-    background-color: #80ED99;
-    border: none;
-}
-
-.botonesFormulario button:hover {
-    background-color: #57CC99;
-}
-
-.datoscontacto {
-    text-align: center;
-    padding-top: 40px;
-    font-weight: 600;
-}
-.datoscontacto iframe {
-    width: 100%;
-}
-
-
-
-/* faq */
-
-.faq {
-    width: 100%;
-}
-.faq-accordion { 
-    padding: 30px 50px;
-    margin: 80px;
-}
-.tituloFAQ {
-    text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left top;
-    display: flex;
-    align-items: center;
-    background-image: url(../img/mujerConPaleta.png);
-    height: 30vh;
-    color: white;
-    text-align: left;
-    padding-left: 10%;
-}
 .accordion-button {
-    background-color: #f1f1f1;
-    font-weight: bold;
-    padding: 40px 20px;
+  background-color: #f1f1f1;
+  font-weight: bold;
+  padding: 40px 20px;
 }
 
 .accordion-body {
-    padding-top: 40px;
-    padding-bottom: 40px;
+  padding: 40px 20px;
 }
 
-
-/* quienes somos */
-
-.tituloQuienesSomos{
-    text-align: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left top;
-    display: flex;
-    align-items: center;
-    color: white;
-    background-image: url(../img/mujerConPaleta.png);
-    height: 30vh;
-    padding-left: 10%;
+.profesores {
+  text-align: center;
+  padding: 80px 0;
 }
-.profesores{
-    text-align: center;
-    padding: 80px 0;
+.profesores h5 {
+  font-weight: 600;
 }
-.profesores h5{
-    font-weight: 600;
+.profesores img {
+  width: 80%;
+  border-radius: 20px;
 }
-.profesores img{
-    width: 80%;
-    border-radius: 20px;
-}
-.profesores p{
-    text-align: center;
-    margin-top: 20px;
-    padding: 0 10%;
-}
-.recuadroGris{
-    background-color: #f1f1f1;
-    padding: 20px 30px;
-    margin-bottom: 80px;
-    border-radius: 20px;
+.profesores p {
+  margin: 20px 10%;
 }
 
-
-
-
-/* Queries */
-@media screen and (max-width:768px) {
-    header{
-        padding: 0;
-    }
-	section.banner {
-	    padding: 50px 20px 20px 20px;
-	}    
-    .precios img{
-        width: 60%;
-        padding-bottom: 20px;
-    }
-    .bg-verdeoscuro, .bg-intermedio, .bg-claro {
-        width: 100%;
-        margin: 0 auto;
-    }
-    form{
-        width: 100%;
-    }
-
-    .ubicacion iframe{
-        width: 90%!important;
-        margin: 20px 0;
-    }
-    .faq-accordion {
-        margin: 10px;
-    }
+.recuadroGris {
+  background-color: #f1f1f1;
+  padding: 20px 30px;
+  margin-bottom: 80px;
+  border-radius: 20px;
 }
 
-
-@media screen and (max-width:375px) {
-    .card-valoraciones{
-        margin-bottom: 20px;
-    }
-
-    .navFooter ul li {
-        font-size: 11px;
-    }
-
-
-
-
+@media (max-width: 768px) {
+  header {
+    padding: 0;
+  }
+  .banner {
+    padding: 50px 20px 20px;
+  }
+  .precios img {
+    padding-bottom: 30px;
+  }
+  .ubicacion iframe {
+    width: 93%;
+    margin: 0 auto;
+  }
+  form {
+    width: 100%;
+  }
+  .faq-accordion {
+    margin: 10px;
+  }
 }
+@media (max-width: 375px) {
+  .card-valoraciones {
+    margin-bottom: 20px;
+  }
+  .navFooter ul li {
+    font-size: 11px;
+  }
+  iframe {
+    width: 90%;
+    height: 80%;
+  }
+  .ubicacion ul {
+    padding-top: 50px;
+    padding-bottom: 35px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

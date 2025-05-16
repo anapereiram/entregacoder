@@ -1,0 +1,303 @@
+// Variables
+$primary-font: 'Merriweather Sans', sans-serif;
+$font-size-base: 16px;
+
+// Colors
+$color1: #38A3A5;
+$color2: #22577A;
+$color3: #57CC99;
+$color4: #80ED99;
+$color5: #C7F9CC;
+$color-dark: #000;
+$color-white: #fff;
+$color-yellow: yellow;
+
+// Breakpoints
+$bp-md: 768px;
+$bp-sm: 375px;
+
+// Mixins
+@mixin flex-center($dir: row) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-base(
+  $bg: $color2,
+  $fg: $color-white,
+  $padding: 10px 20px,
+  $radius: 8px
+) {
+  background-color: $bg;
+  color: $fg;
+  padding: $padding;
+  border-radius: $radius;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+@mixin section-bg($img: null, $bg: transparent, $pos: left top, $size: cover) {
+  background-color: $bg;
+  @if $img {
+    background-image: url($img);
+    background-position: $pos;
+    background-size: $size;
+    background-repeat: no-repeat;
+  }
+}
+
+@mixin respond-to($bp) {
+  @if $bp == md {
+    @media (max-width: $bp-md) { @content; }
+  } @else if $bp == sm {
+    @media (max-width: $bp-sm) { @content; }
+  }
+}
+
+// Base
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: $primary-font;
+  font-size: $font-size-base;
+}
+
+// Header & Navbar
+header {
+  padding: 0 30px;
+  height: 100px;
+  background-color: $color1;
+  @include flex-center();
+
+  .logo {
+    img { max-width: 70px; }
+  }
+}
+.navbar,
+.navbar-collapse {
+  background-color: $color1;
+  a {
+    color: $color-white !important;
+    &.active,
+    &:hover {
+      color: $color-dark !important;
+    }
+  }
+  .navbar-brand a {
+    color: $color-dark !important;
+  }
+}
+
+// Buttons
+.btn_azul {
+  @include button-base($color2);
+  &:hover {
+    border: 1px solid $color2;
+  }
+}
+
+// Banner
+.banner {
+  @include section-bg('../img/complejoDePadel.png', null);
+  @include flex-center();
+  color: $color-white;
+  min-height: 495px;
+  text-align: center;
+  p { font-weight: 200; margin: 20px 0; }
+  img { width: 100%; }
+  .text-align { @include flex-center(column); }
+}
+
+// Clases
+.card-clases { background-color: #f1f1f1; border-radius: 10px; border: none; }
+.clases {
+  @include flex-center(column);
+  text-align: center;
+  padding: 60px 0;
+
+  h2 { color: $color2; padding-bottom: 40px; }
+  img { width: 70%; border-radius: 10px; }
+  .card-title { font-weight: 600; font-size: 20px; }
+  .card-text { padding: 10px; }
+}
+
+// Instalaciones
+.instalaciones {
+  background-color: $color1;
+  padding: 80px 0;
+  img { width: 100%; }
+  .recuadro { border: 1px solid $color-dark; padding: 10px; border-radius: 10px; }
+}
+
+// Valoraciones
+.valoraciones {
+  padding: 80px 0;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 20px;
+
+  h3 { padding-bottom: 30px; }
+  .card-valoraciones {
+    margin-top: 20px;
+    padding: 20px;
+    img { width: 40%; margin: 0 auto; }
+  }
+}
+
+// Beneficios
+.beneficiosClases {
+  background-color: $color3;
+  padding: 40px 0;
+  img { width: 100%; }
+}
+
+// Ubicación & Promoción
+.ubicacion {
+  background-color: $color1;
+  h3 { padding: 30px 0 30px 30px; }
+  iframe { width: 100%; padding-left: 30px; height: 60%; }
+}
+
+.ubicacion ul{
+  padding-top: 130px;
+}
+
+.promocion {
+  background-color: $color-yellow;
+  text-align: center;
+  padding: 20px;
+  img { max-width: 60%; margin-bottom: 15px; }
+  .btn_azul { margin-top: 15px;}
+}
+
+// Footer
+footer {
+  background-color: $color-dark;
+  padding: 40px;
+  text-align: center;
+
+  .navFooter {
+    ul { @include flex-center(); list-style: none; gap: 20px; li a {
+      color: $color-white; font-weight: 500;
+      &:hover { text-decoration: underline; }
+    } }
+  }
+}
+
+// Precios
+.titulos { text-align: center; padding: 60px 0 20px; color: $color2; }
+.precios {
+  .row { margin-bottom: 60px; }
+  img { width: 90%; border-radius: 20px; }
+  .recuadro-precios { border-radius: 20px; }
+  .card-precios {
+    padding: 80px 20px; border: none; text-align: center;
+    ul { list-style: none; padding-left: 20px; }
+  }
+  &-verdescuro { background-color: $color3; }
+  &-intermedio { background-color: $color4; }
+  &-claro { background-color: $color5; }
+  .centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// Contacto
+.formularioContacto{
+  padding: 60px 0;
+}
+.tituloContacto {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  @include section-bg('../img/canchaPadel.jpg', null);
+  height: 30vh;
+  color: $color-white;
+  text-align: left;
+  padding-left: 5%;
+}
+iframe{
+  width: 100%;
+  height: 80%;
+}
+form {
+  background-color: $color1;
+  padding: 25px;
+  border-radius: 8px;
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+
+  h1 { color: $color-dark; margin-bottom: 20px; font-size: medium; }
+  .inputWrapper,
+  .inputMensaje {
+    position: relative;
+    i { position: absolute; margin-left: 20px; top: 14px; font-size: 20px; color: $color4; transition: .3s;
+      &:focus-within { transform: scale(1.2); }
+    }
+    input { padding: 12px 0 12px 50px; margin-bottom: 15px; width: 85%; font-size: 15px; outline: none; }
+  }
+
+  .botonesFormulario {
+    display: flex; flex-direction: column; gap: 15px; margin: 20px 0;
+    button { padding: 10px 0; border-radius: 5px; background-color: $color4; &:hover { background-color: $color3; } }
+  }
+
+  .datoscontacto { text-align: center; padding-top: 40px; font-weight: 600;
+    iframe { width: 100%; }
+  }
+}
+
+// FAQ & Quienes Somos
+.tituloFaq,
+.tituloQuienesSomos { 
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  @include section-bg('../img/mujerConPaleta.png', null);
+  height: 30vh;
+  color: $color-white;
+  text-align: left;
+  padding-left: 5%;}
+.faq-accordion { padding: 30px 50px; margin: 0 auto; }
+.accordion-button { background-color: #f1f1f1; font-weight: bold; padding: 40px 20px; }
+.accordion-body { padding: 40px 20px; }
+
+.profesores {
+  text-align: center;
+  padding: 80px 0;
+  h5 { font-weight: 600; }
+  img { width: 80%; border-radius: 20px; }
+  p { margin: 20px 10%; }
+}
+.recuadroGris { background-color: #f1f1f1; padding: 20px 30px; margin-bottom: 80px; border-radius: 20px; }
+
+// Responsive
+@include respond-to(md) {
+  header { padding: 0; }
+  .banner { padding: 50px 20px 20px; }
+  .precios img {
+    padding-bottom: 30px;
+  }
+  .ubicacion iframe { width: 93%; margin: 0 auto; }
+  form { width: 100%; }
+  .faq-accordion { margin: 10px; }
+}
+@include respond-to(sm) {
+  .card-valoraciones { margin-bottom: 20px; }
+  .navFooter ul li { font-size: 11px; }
+  iframe{width: 90%; height: 80%;}
+  .ubicacion ul {padding-top: 50px; padding-bottom: 35px;}
+}

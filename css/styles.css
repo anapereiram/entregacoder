@@ -1,0 +1,340 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.bodyHome {
+  display: grid;
+  grid-template-areas: "header header header" "banner banner banner" "titulo titulo titulo" "clasesContenedor clasesContenedor clasesContenedor" "instalaciones instalaciones instalaciones" "tituloValoraciones tituloValoraciones tituloValoraciones" "valoraciones valoraciones valoraciones" "bannerBeneficiosClases bannerBeneficiosClases bannerBeneficiosClases" "mapaUbicacion mapaUbicacion promocion" "footer footer footer";
+  grid-template-columns: 1fr 1.5fr 0.5fr;
+  grid-template-rows: 90px auto auto auto auto auto auto auto auto 100px;
+}
+.bodyHome header {
+  grid-area: header;
+  background-color: #38A3A5;
+  padding: 0 30px;
+}
+.bodyHome header ul {
+  display: flex;
+  list-style: none;
+}
+.bodyHome header ul li {
+  margin: 10px;
+  color: white;
+}
+.bodyHome header .logo {
+  display: flex;
+  align-items: center;
+}
+.bodyHome header .logo img {
+  width: 100px;
+  margin-right: 10px;
+}
+.bodyHome header a {
+  display: flex;
+  color: black;
+}
+.bodyHome .navbar {
+  grid-area: navbar;
+  color: white;
+  text-align: left;
+}
+.bodyHome .navbar ul {
+  display: flex;
+  flex-direction: row;
+}
+.bodyHome .navbar ul li {
+  margin-top: 20px;
+}
+.bodyHome .navbar a {
+  color: white;
+}
+.bodyHome #offcanvasNavbar {
+  background-color: #38A3A5;
+  color: white;
+  line-height: 40px;
+  padding-left: 25px;
+}
+.bodyHome .titulo, .bodyHome .tituloValoraciones {
+  grid-area: titulo;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #22577A;
+  text-align: center;
+  padding: 30px;
+  margin-top: 3%;
+}
+.bodyHome .boton {
+  background-color: #22577A;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+.bodyHome #banner {
+  grid-area: banner;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 495px;
+  color: white;
+  background: url(../img/complejoDePadel.png) left top/cover no-repeat;
+}
+.bodyHome #banner-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bodyHome #banner img {
+  width: 100%;
+}
+.bodyHome #banner h2 {
+  font-weight: 200;
+  margin: 10px 0;
+}
+.bodyHome #banner p {
+  font-weight: 300;
+  margin: 20px 0;
+}
+.bodyHome #clasesContenedor {
+  grid-area: clasesContenedor;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+.bodyHome #clasesContenedor .clases {
+  flex: 1 1 33%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 475px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+}
+.bodyHome #clasesContenedor .clases .boton {
+  margin-top: 15px;
+}
+.bodyHome #clasesContenedor .clases p {
+  margin-top: 15px;
+  padding: 0 35px;
+}
+.bodyHome #clasesContenedor .clases img.imagenclases {
+  width: 55%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.bodyHome #instalaciones {
+  grid-area: instalaciones;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #38A3A5;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 70px;
+}
+.bodyHome #instalaciones img {
+  width: 90%;
+  margin: 60px 0;
+  border-radius: 8px;
+}
+.bodyHome #instalaciones .instalaciones-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.bodyHome #instalaciones li {
+  padding-top: 10px;
+}
+.bodyHome .tituloValoraciones {
+  grid-area: tituloValoraciones;
+}
+.bodyHome #valoraciones {
+  grid-area: valoraciones;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+  background-size: 99px;
+  background-repeat: no-repeat;
+}
+.bodyHome #valoraciones .valoracion {
+  flex: 1 1 33%;
+  border-style: double;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 2%;
+}
+.bodyHome #valoraciones .valoracion p {
+  margin-top: 15px;
+}
+.bodyHome #bannerBeneficiosClases {
+  grid-area: bannerBeneficiosClases;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #57CC99;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 40px;
+}
+.bodyHome #bannerBeneficiosClases img {
+  width: 100%;
+}
+.bodyHome #bannerBeneficiosClases .bannerbeneficiostexto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.bodyHome #bannerBeneficiosClases li {
+  margin: 10px;
+}
+.bodyHome #mapaUbicacion {
+  grid-area: mapaUbicacion;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #38A3A5;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px 0;
+}
+.bodyHome #mapaUbicacion .dondeUbicarnos h3 {
+  text-align: center;
+}
+.bodyHome #mapaUbicacion .dondeUbicarnos iframe {
+  width: 100%;
+}
+.bodyHome #mapaUbicacion .dondeUbicarnosTexto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.bodyHome .promocion {
+  grid-area: promocion;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  padding: 20px;
+  margin-top: 20%;
+}
+.bodyHome .promocion p {
+  margin-top: 30px;
+}
+.bodyHome img.imagenValoraciones {
+  width: 150px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.bodyHome footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 90px;
+}
+.bodyHome footer a {
+  color: white;
+}
+@media (max-width: 768px) {
+  .bodyHome .boton {
+    font-size: 8px;
+  }
+  .bodyHome header {
+    justify-content: space-between;
+  }
+  .bodyHome #banner {
+    min-height: 500px;
+  }
+  .bodyHome #banner h2 {
+    font-size: 15px;
+  }
+  .bodyHome #banner p {
+    font-size: 11px;
+  }
+  .bodyHome #banner-left {
+    font-size: 17px;
+  }
+  .bodyHome #banner img {
+    width: 50%;
+  }
+  .bodyHome .navbar {
+    font-size: 10px;
+    background-color: #38A3A5;
+  }
+  .bodyHome header a {
+    font-size: 10px;
+  }
+  .bodyHome header .logo img {
+    width: 70px;
+  }
+  .bodyHome .valoracion {
+    margin: 25px 2% 100px;
+  }
+  .bodyHome .titulo, .bodyHome .tituloValoraciones {
+    font-size: 10px;
+    padding: 10px;
+    margin-bottom: 11px;
+  }
+  .bodyHome .imagenclases {
+    width: 150px;
+  }
+  .bodyHome .clases {
+    width: 48%;
+  }
+  .bodyHome .dondeUbicarnosTexto {
+    font-size: 13px;
+  }
+}
+@media (max-width: 375px) {
+  .bodyHome {
+    grid-template-areas: "header" "banner" "titulo" "clasesContenedor" "instalaciones" "tituloValoraciones" "valoraciones" "bannerBeneficiosClases" "mapaUbicacion" "promocion" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .bodyHome #banner {
+    height: 300px;
+    min-height: 300px;
+  }
+  .bodyHome #banner img {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
